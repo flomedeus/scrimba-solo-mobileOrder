@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <!-- Google fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <!-- Other -->
+        <link rel="stylesheet" href="styles/index.css">
+        <title>Jimmy's Diner</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-title">
+                <h1>Jimmy's Diner</h1>
+                <h2>The best burgers and pizzas in town.</h2>
+            </div>
+        </header>
+        <main>
+            <div class="items-container" id="items-container">
+
+            </div>
+            <div class="order-container hidden" id="order-container">
+                <div class="order">
+                    <h3>Your order</h3>
+                    <div class="order-items" id="order-items">
+                        <div class="order-item">
+
+                        </div>
+                    </div>
+                    <div class="order-price" id="order-price">
+
+                    </div>
+
+                    <button class="order-btn" id="order-btn">Complete order</button>
+                </div>
+            </div>
+        </main>
+        <!-- Payment modal -->
+        <section class="payment-modal hidden" id="payment-modal">
+            <div class="payment-modal-inner">
+                <p>Enter card details</p>
+                <form id="payment-form" class="payment-form">
+                    <div class="form-container">
+                        <label for="form-name">Full name</label>
+                        <input required type="text"
+                               pattern="[A-Za-z\s]+"
+                               minlength="3"
+                               name="fullName"
+                               id="form-name"
+                               placeholder="FirstName LastName">
+                        <label for="form-card">Card Number</label>
+                        <input required type="number"
+                               pattern="\d{16}"
+                               minlength="16"
+                               maxlength="16"
+                               name="cardNumber"
+                               id="form-card"
+                               placeholder="5555 2222 1111 3333">
+                        <label for="form-ccv">CCV</label>
+                        <input required type="number"
+                               pattern="\d{3}"
+                               minlength="3"
+                               maxlength="3"
+                               name="cardCCV"
+                               id="form-ccv"
+                               placeholder="123">
+                    </div>
+                    <button class="pay-btn">Pay</button>
+                </form>
+
+            </div>
+        </section>
+
+
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+
