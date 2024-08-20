@@ -136,6 +136,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding-bottom: 10px;
 }
 
 .order-price{
@@ -148,8 +149,12 @@ main{
     justify-content: end;
 }
 
-.order-item-price{
+.order-item-name{
     flex-grow: 1;
+}
+
+.order-item-price{
+    flex-grow: 0;
     text-align: end;
 }
 
@@ -166,17 +171,19 @@ main{
 
 .remove-btn{
     border: none;
-    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     background: #DDD;
-    border-radius: 5px;
+    border-radius: 10%;
     color: #3C3C3C;
     cursor: pointer;
+    padding: 0 10px;
 }
 
 .remove-btn:hover{
-    color:black;
-    background: #CCC;
+    color:red;
+    background: #BBB;
+    font-weight: bold;
 }
 
 

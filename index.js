@@ -70,8 +70,8 @@ function renderOrder(){
     orderPriceTotal = orderItemsArray.reduce((total,currentItem) => total + currentItem.itemPrice ,0)
     orderItems.innerHTML = orderItemsArray.map((item,index) =>{
         return `<div class="order-item">
-                    <p>${item.itemName}</p>
-                    <button class="remove-btn" data-orderedItemIndex="${index}">Remove</button>
+                    <p class="order-item-name">${item.itemName}</p>
+                    <button aria-label="remove item" class="remove-btn" data-orderedItemIndex="${index}">X</button>
                     <p class="order-item-price">$${item.itemPrice}</p>
                 </div>`
     }).join('')
